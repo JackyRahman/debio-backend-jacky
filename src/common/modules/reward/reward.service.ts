@@ -19,6 +19,10 @@ export class RewardService {
     }
   }
 
+  getAll() {
+    return this.rewardRepository.find();
+  }
+
   getRewardBindingByAccountId(accountId) {
     try {
       return this.rewardRepository.findOne({
